@@ -1,0 +1,9 @@
+<launch>
+
+<node pkg="rosbag" type="play" name="play" output="screen" 
+    args="/media/chen/chen/SLAM/datasets/rgbd_dataset_freiburg2_pioneer_slam.bag" >
+    <remap from="/camera/depth/image" to="/camera/depth" />
+    <remap from="/camera/rgb/image_color" to="/camera/rgb" />
+</node>
+
+</launch>

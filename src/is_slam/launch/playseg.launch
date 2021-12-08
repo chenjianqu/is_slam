@@ -1,0 +1,7 @@
+<launch>
+
+<node pkg="is_slam" type="playdata" name="play_node" output="screen" 
+    args="/media/chen/chen/GraduationProject/data/instance_segmentation/freiburg1_xyzz /media/chen/chen/SLAM/datasets/rgbd_dataset_freiburg1_xyz/depth /media/chen/chen/GraduationProject/data/track/freiburg1_xyz/map_keyframe.txt" >
+</node>
+
+</launch>

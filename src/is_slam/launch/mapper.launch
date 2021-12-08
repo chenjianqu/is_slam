@@ -1,0 +1,12 @@
+<launch>
+
+#三维建图节点
+<node 
+	pkg="is_slam"
+	type="mapper"
+	name="mapper"
+	output="screen"
+	args="/media/chen/chen/Robot/ws/data/freiburg1_float.yaml /media/chen/chen/Robot/ws/data" /> #参数文件和保存路径
+
+	
+</launch>

@@ -1,0 +1,7 @@
+<launch>
+
+<node pkg="is_slam" type="playdata" name="play_node" output="screen" 
+    args="/home/alex/slam/datasets/rgbd_dataset_freiburg1_xyz yes" >
+</node>
+
+</launch>

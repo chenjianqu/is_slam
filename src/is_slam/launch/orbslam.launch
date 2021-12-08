@@ -1,0 +1,11 @@
+<launch>
+
+#ORB-SLAM节点
+<node 
+	pkg="is_slam"
+	type="orb_slam"
+	name="orb_slam"
+	output="screen"
+	args="/media/chen/chen/Robot/ws/data/ORBvoc.txt /media/chen/chen/Robot/ws/data/freiburg1_float.yaml //media/chen/chen/Robot/ws/data/map_keyframe.txt" /> #视觉词典文件，参数文件
+
+</launch>

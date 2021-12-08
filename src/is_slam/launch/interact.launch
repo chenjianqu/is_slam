@@ -1,0 +1,17 @@
+<launch>
+#图形界面交互节点
+<node 
+	pkg="interact_slam"
+	type="interact_slam_node"
+	name="interact_node"
+	output="screen" />
+
+
+#命令服务节点
+<node 
+	pkg="interact_slam"
+	type="order_service.py"
+	name="order_service_node"
+	output="screen" /> 
+
+</launch>

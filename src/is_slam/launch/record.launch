@@ -1,0 +1,32 @@
+<launch>
+
+#ORB-SLAM节点
+<node 
+	pkg="is_slam"
+	type="orb_slam"
+	name="orb_slam"
+	output="screen"
+	args="/media/chen/chen/Robot/slam_ws/data/ORBvoc.txt /media/chen/chen/Robot/slam_ws/data/freiburg2_bag.yaml" /> #视觉词典文件，参数文件
+
+
+
+#全景分割节点
+<node 
+	pkg="is_slam"
+	type="ps.py"
+	name="ps_node"
+	output="screen"/>
+
+
+
+#录制节点
+<node 
+	pkg="is_slam"
+	type="recorder"
+	name="record_node"
+	output="screen"
+    args="/media/chen/chen/Robot/slam_ws/data/rgbd_dataset_freiburg2_pioneer_slam3" />#保存路径
+    
+
+
+</launch>

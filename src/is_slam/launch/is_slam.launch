@@ -1,0 +1,53 @@
+<launch>
+
+#实例分割节点
+<node 
+	pkg="is_slam"
+	type="seg.py"
+	name="seg_node"
+	output="screen"/>
+
+#ORB-SLAM节点
+<node 
+	pkg="is_slam"
+	type="orb_slam"
+	name="orb_slam"
+	output="screen"
+	args="/home/alex/ws/data/ORBvoc.txt /home/alex/ws/data/freiburg1_float.yaml /home/alex/ws/data/map_keyframe.txt /camera/rgb/image_color /camera/depth/image" /> 
+#视觉词典文件，参数文件,关键帧位姿保存路径，RGB话题、深度话题
+
+	
+#三维建图节点
+<node 
+	pkg="is_slam"
+	type="mapper"
+	name="mapper"
+	output="screen"
+	args="/home/alex/ws/data/freiburg1_float.yaml /home/alex/ws/data" /> #参数文件和保存路径
+
+
+#二维栅格生成节点
+<node 
+	pkg="is_slam"
+	type="convertor"
+	name="convertor_node"
+	output="screen" /> 
+
+
+
+#图形界面交互节点
+<node 
+	pkg="interact_slam"
+	type="interact_slam_node"
+	name="interact_node"
+	output="screen" />
+
+
+#命令服务节点
+<node 
+	pkg="interact_slam"
+	type="order_service.py"
+	name="order_service_node"
+	output="screen" /> 
+
+</launch>
