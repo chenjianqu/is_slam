@@ -2,5 +2,5 @@ data/ORBvoc.txt
 data/map.pcd
 src/is_slam/yolact/weights/yolact_resnet50_54_800000.pth
 .catkin_workspace
-
+/src/is_slam/cmake-build-debug/
 

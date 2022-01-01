@@ -1,5 +1,16 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+
+#########################################################
+# Copyright (C) 2022, Chen Jianqu, Shanghai University
+#
+# This file is part of is_slam.
+#
+# Licensed under the MIT License;
+# you may not use this file except in compliance with the License.
+#########################################################
+
+
 from threading import Thread,Lock
 import socket
 import cv2
